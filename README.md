@@ -249,6 +249,7 @@ Medical_Xray_Project/
 # 👩‍💻 Author
 
 **Nahid Kausar**
+**Ananaya**
 
 B.Tech Computer Science & Engineering
 
