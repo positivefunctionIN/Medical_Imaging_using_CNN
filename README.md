@@ -246,17 +246,6 @@ Medical_Xray_Project/
 
 ---
 
-# 👩‍💻 Author
-
-**Nahid Kausar**,
-**Ananaya**
-
-B.Tech Computer Science & Engineering
-
-Passionate about Artificial Intelligence, Medical Imaging, Deep Learning, and Explainable AI.
-
----
-
 # ⭐ Acknowledgements
 
 * Kaggle Chest X-ray Pneumonia Dataset
