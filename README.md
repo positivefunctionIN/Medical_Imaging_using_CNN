@@ -1,16 +1,16 @@
-# 🩺 Explainable Medical Imaging for Pneumonia Detection
+# Explainable Medical Imaging for Pneumonia Detection
 
 A deep learning project that compares multiple CNN architectures for automated **Pneumonia Detection** from Chest X-ray images. The project focuses on model comparison, explainable AI using **Grad-CAM**, and deployment with **Gradio** and **Hugging Face Spaces**.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project develops and compares different deep learning models to detect **Pneumonia** from Chest X-ray images. The objective is to evaluate each model's performance and explain its predictions using Grad-CAM, making the system more interpretable and reliable.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 * Detect Pneumonia from Chest X-rays.
 * Compare multiple CNN architectures.
@@ -20,7 +20,7 @@ This project develops and compares different deep learning models to detect **Pn
 
 ---
 
-## 🏥 Dataset
+## Dataset
 
 **Dataset:** Chest X-ray Pneumonia Dataset
 
@@ -35,7 +35,7 @@ https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
 ---
 
-## 🧠 Models
+## Models
 
 | Model                        | Status         |
 | ---------------------------- | -------------- |
@@ -45,7 +45,7 @@ https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
 ---
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 * Accuracy
 * Precision
@@ -57,13 +57,13 @@ https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
 ---
 
-## 🔥 Explainable AI
+## Explainable AI
 
 Grad-CAM will be implemented for all three models to visualize the regions responsible for each prediction, enabling better model interpretability and comparison.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * Python
 * TensorFlow / Keras
