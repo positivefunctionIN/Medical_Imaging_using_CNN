@@ -1,256 +1,145 @@
-# 🩺 Pneumonia Detection from Chest X-rays using Deep Learning
+# 🩺 Explainable Medical Imaging for Pneumonia Detection
 
-An Explainable AI system for automated pneumonia detection from chest X-ray images using **DenseNet121**, **Transfer Learning**, and **Grad-CAM** visualization. This project is being developed as an end-to-end medical imaging application with future integration of **Medical Visual Question Answering (VQA)**.
-
----
-
-# 📌 Project Overview
-
-Pneumonia is one of the leading causes of respiratory-related deaths worldwide. Early diagnosis from chest X-rays is essential, especially in hospitals with limited access to experienced radiologists.
-
-This project develops an AI-assisted diagnostic system capable of:
-
-* Detecting pneumonia from chest X-ray images.
-* Highlighting suspicious lung regions using Grad-CAM.
-* Providing confidence scores for predictions.
-* Serving as the foundation for an interactive Medical AI assistant.
-
-The long-term objective is to build a research-grade Explainable Medical AI system suitable for deployment and academic research.
+A deep learning project that compares multiple CNN architectures for automated **Pneumonia Detection** from Chest X-ray images. The project focuses on model comparison, explainable AI using **Grad-CAM**, and deployment with **Gradio** and **Hugging Face Spaces**.
 
 ---
 
-# 🎯 Objectives
+## 📌 Project Overview
+
+This project develops and compares different deep learning models to detect **Pneumonia** from Chest X-ray images. The objective is to evaluate each model's performance and explain its predictions using Grad-CAM, making the system more interpretable and reliable.
+
+---
+
+## 🎯 Objectives
 
 * Detect Pneumonia from Chest X-rays.
-* Build an Explainable AI model using Grad-CAM.
-* Develop an interactive Gradio web application.
-* Extend the system to multiple thoracic diseases.
-* Integrate Medical Visual Question Answering (LLaVA-Med / BLIP-2).
+* Compare multiple CNN architectures.
+* Improve feature extraction using CBAM attention.
+* Visualize model predictions with Grad-CAM.
+* Deploy the best model using Gradio and Hugging Face.
 
 ---
 
-# 🚀 Key Features
-
-✅ Binary Classification (Normal vs Pneumonia)
-
-✅ Transfer Learning using DenseNet121
-
-✅ Image Preprocessing & Data Augmentation
-
-✅ Explainable AI using Grad-CAM
-
-✅ Confidence Score Prediction
-
-✅ Interactive Gradio Web Application (Upcoming)
-
-✅ Medical Visual Question Answering (Upcoming)
-
----
-
-# 🏥 Why This Project Matters
-
-* Pneumonia causes millions of deaths every year.
-* Early diagnosis significantly improves patient outcomes.
-* Many healthcare centers lack experienced radiologists.
-* Explainable AI increases clinician trust in AI predictions.
-* Demonstrates practical application of AI in healthcare.
-
----
-
-# 📂 Dataset
+## 🏥 Dataset
 
 **Dataset:** Chest X-ray Pneumonia Dataset
 
 **Source:** Kaggle
 
-Total Images: **5,856**
+https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
-Classes:
+**Classes**
 
 * NORMAL
 * PNEUMONIA
 
-Image Resolution:
+---
 
-224 × 224 pixels
+## 🧠 Models
 
-Dataset Split:
-
-* Training
-* Validation
-* Testing
+| Model                        | Status         |
+| ---------------------------- | -------------- |
+| Custom CNN                   | ✅ Completed    |
+| Hybrid CNN + CBAM            | 🚧 In Progress |
+| ResNet50 (Transfer Learning) | ⏳ Planned      |
 
 ---
 
-# 🧠 Model Architecture
+## 📊 Evaluation Metrics
 
-Input Chest X-ray (224×224×3)
-
-↓
-
-Data Augmentation
-
-↓
-
-DenseNet121 (ImageNet Pretrained)
-
-↓
-
-Global Average Pooling
-
-↓
-
-Dropout
-
-↓
-
-Sigmoid Output Layer
-
-↓
-
-Prediction
-
-↓
-
-Grad-CAM Heatmap
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* ROC-AUC
+* Confusion Matrix
+* Classification Report
 
 ---
 
-# 🛠️ Tech Stack
+## 🔥 Explainable AI
 
-Programming Language
+Grad-CAM will be implemented for all three models to visualize the regions responsible for each prediction, enabling better model interpretability and comparison.
+
+---
+
+## 🛠 Tech Stack
 
 * Python
-
-Deep Learning
-
-* TensorFlow
-* Keras
-
-Computer Vision
-
+* TensorFlow / Keras
 * OpenCV
-
-Machine Learning
-
-* Scikit-learn
-
-Visualization
-
+* NumPy
 * Matplotlib
-* Seaborn
-
-Deployment
-
-* Gradio (Upcoming)
-
-Version Control
-
-* Git & GitHub
-
-Development Environment
-
+* Scikit-learn
 * Google Colab
 
----
+**Deployment (Planned)**
 
-# 📊 Model Performance
-
-## Validation Accuracy
-
-**92.9%**
-
-## Test Accuracy
-
-**87.66%**
-
-## ROC-AUC Score
-
-**0.945**
-
-## Classification Report
-
-| Class     | Precision | Recall | F1-score |
-| --------- | --------: | -----: | -------: |
-| Normal    |      0.89 |   0.77 |     0.82 |
-| Pneumonia |      0.87 |   0.94 |     0.91 |
-
-Overall Accuracy: **87.66%**
+* Gradio
+* Hugging Face Spaces
 
 ---
 
-# 📈 Confusion Matrix
+## 📂 Repository Structure
 
-| Actual \ Predicted | Normal | Pneumonia |
-| ------------------ | -----: | --------: |
-| Normal             |    180 |        54 |
-| Pneumonia          |     23 |       367 |
-
-The model achieves a high recall for pneumonia, making it suitable as an initial screening system where minimizing missed disease cases is essential.
-
----
-
-# 🔥 Explainable AI
-
-Grad-CAM is used to visualize the lung regions responsible for the model's prediction.
-
-This improves model interpretability by highlighting clinically relevant areas rather than providing only a classification label.
-
----
-
-# 🌐 Future Enhancements
-
-* Multi-class thoracic disease detection
-* Medical Visual Question Answering (LLaVA-Med)
-* Clinical report generation
-* DICOM image support
-* Cloud deployment
-* REST API
-* Docker containerization
-
----
-
-# 📁 Project Structure
-
-```
-Medical_Xray_Project/
-
-├── notebooks/
-├── models/
+```text
+medical_imaging_project/
+│
+├── README.md
+├── requirements.txt
+├── model_1_custom_cnn.ipynb
+├── model_2_hybrid_cnn_cbam.ipynb
+├── model_3_resnet50.ipynb
+├── comparison_report.ipynb
 ├── outputs/
-│   ├── confusion_matrix.png
-│   ├── roc_curve.png
-│   ├── gradcam/
-├── app/
-├── report/
-├── images/
-└── README.md
+│   ├── heatmaps/
+│   └── results/
+└── app/
 ```
 
 ---
 
-# 📚 Future Roadmap
+## 🚀 Project Workflow
 
-* [x] Dataset Collection
-* [x] Data Exploration
-* [x] Data Visualization
-* [x] Data Augmentation
-* [x] DenseNet121 Training
-* [x] Model Evaluation
-* [ ] Sample Predictions
-* [ ] Grad-CAM Explainability
-* [ ] Gradio Web Application
-* [ ] Medical Visual Question Answering
-* [ ] Multi-Disease Classification
-* [ ] Deployment
+```text
+Chest X-ray
+      │
+      ▼
+Preprocessing
+      │
+      ▼
+Custom CNN
+      │
+      ▼
+Hybrid CNN + CBAM
+      │
+      ▼
+ResNet50
+      │
+      ▼
+Performance Comparison
+      │
+      ▼
+Grad-CAM
+      │
+      ▼
+Gradio App
+      │
+      ▼
+Hugging Face Deployment
+```
 
 ---
 
-# ⭐ Acknowledgements
+## 📌 Current Progress
 
-* Kaggle Chest X-ray Pneumonia Dataset
-* TensorFlow & Keras
-* Google Colab
-* OpenCV
-* Scikit-learn
-* Matplotlib
+* ✅ Dataset Preparation
+* ✅ Data Augmentation & Preprocessing
+* ✅ Custom CNN
+* 🚧 Hybrid CNN + CBAM
+* ⏳ ResNet50
+* ⏳ Grad-CAM
+* ⏳ Gradio Deployment
+* ⏳ Hugging Face Deployment
+
+---
