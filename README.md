@@ -136,8 +136,8 @@ Hugging Face Deployment
 * ✅ Dataset Preparation
 * ✅ Data Augmentation & Preprocessing
 * ✅ Custom CNN
-* 🚧 Hybrid CNN + CBAM
-* ⏳ ResNet50
+* ✅ Hybrid CNN + CBAM
+* ✅ ResNet50
 * ⏳ Grad-CAM
 * ⏳ Gradio Deployment
 * ⏳ Hugging Face Deployment
