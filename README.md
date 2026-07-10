@@ -40,8 +40,8 @@ https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 | Model                        | Status         |
 | ---------------------------- | -------------- |
 | Custom CNN                   | ✅ Completed    |
-| Hybrid CNN + CBAM            | 🚧 In Progress |
-| ResNet50 (Transfer Learning) | ⏳ Planned      |
+| Hybrid CNN + CBAM            | ✅ Completed |
+| ResNet50 (Transfer Learning) | ✅ Completed     |
 
 ---
 
