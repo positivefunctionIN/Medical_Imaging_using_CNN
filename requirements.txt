@@ -1,6 +1,9 @@
 streamlit
-tensorflow
-numpy
+tensorflow==2.20.0
 opencv-python-headless
-Pillow
-huggingface-hub
+numpy
+pillow
+requests
+pandas
+matplotlib
+reportlab
